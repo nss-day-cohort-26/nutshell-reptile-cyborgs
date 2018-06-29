@@ -1,0 +1,10 @@
+{
+    "user": [{
+        "name": "Test_Name",
+        "id": 0,
+        "displayName": "Test_Display_Name",
+        "email": "@test.com",
+        "password": "Test_Password",
+        "birthday": "Test_Birthday"
+    }]
+}
