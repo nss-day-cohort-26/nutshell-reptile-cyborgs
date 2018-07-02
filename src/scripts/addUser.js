@@ -18,18 +18,21 @@ const addUser = () =>{
        password:password,
        birthday:birthDate
    };
-   databaseMethod.getAllUsers().then((response)=>
-   user.name.forEach(element => {
+   let isDuplicate = false;
+   databaseMethod.getAllUsers().then((response)=>{
+   response.forEach(element => {
+       console.log("element", element)
        if(name ===  element.name){
-           alert("invalid")
+           isDuplicate = true;
         }
-           else{
-            databaseMethod.postUser(user)
-           }
+       })
+   if(isDuplicate === false){
+       databaseMethod.postUser(user)
+   }
    })
-)
    clear()
 }
+module.exports = addUser;
 
 // "name": "Test_Name",
 //         "id": 0,
