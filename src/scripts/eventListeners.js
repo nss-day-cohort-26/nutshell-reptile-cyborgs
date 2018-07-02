@@ -1,6 +1,5 @@
 // Aaron, Michael, Shu, Emily - making event listeners
 
-
 const $ = require("jquery");
 const regForm = require("./regform")
 const clear = require ("./clear")
@@ -11,5 +10,13 @@ body.addEventListener("click", () => {
       clear();
     regForm.buildRegForm();
   }
-});
+  else if (event.target.id === "regSubBtn") {
+    clear();
+    let namedFuction = {}
+  }
+})
+
+
+
+
 
