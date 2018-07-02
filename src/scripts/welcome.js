@@ -1,3 +1,6 @@
+//Authors: Aaron Miller, Emily Venturino, Michael Roberts, Shuaib Sajid
+//Purpose:This module creates the welcome page and is called in main.js
+
 // added Jquery library
 const $ = require("jquery")
 
