@@ -20,7 +20,7 @@ Yep, looks pretty dry and doesn't help in actually applying it. I have used in i
 ```javascript
 const loadForm = require("./form");
 const loadMain = require("./loadMain");
-const save = require("./save");
+DS_Storeconst save = require("./save");
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -39,6 +39,7 @@ body.addEventListener("click", () => {
 Great news everyone! I learned how to mark javascript in markdown!. Eat it, markdown code nazis.
 So from the example above you can how it was better appilied and what happens when a user clicks on a part of the body that has an id. 
 The libary i am at is closing and i still need to cover how some of the databse methods should look like espically since we will end up with many databses in that one json file. I will try to cover more later but it is not likely. I just hope i don't forget before tomorrow.
+### Function to get data from the Request Form
 
 
 
