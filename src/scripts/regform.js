@@ -1,3 +1,6 @@
+//Authors: Michael Roberts and Aaron Miller
+//Purpose: This module creates the registration form
+
 // added Jquery library
 const $ = require("jquery")
 
@@ -22,7 +25,6 @@ const regForm = Object.create({}, {
             //created a div and gave it the class of div-welcome
             const $formDiv = $("<div>").appendTo($divContainer);
             console.log(regForm);
-
 
         }
     }
