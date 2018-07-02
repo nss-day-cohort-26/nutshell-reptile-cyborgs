@@ -9,9 +9,10 @@ const regForm = Object.create({}, {
         value: () => {
 
             // Selects the main div class .div--container on the index
-            const divRef = document.querySelector(".divContainer");
+            const divRef = document.querySelector(".div--container");
 
             //The Title Of The Registration Form
+            const $formDiv = $("<div>")
             const $regTitle = $("<h2>").attr("id", "regTitle").text("Registration Form").appendTo($formDiv);
 
             //The form fields containing the fields and ID's
@@ -23,8 +24,8 @@ const regForm = Object.create({}, {
             const $regSubBtn = $("<button>").attr("type", "button").text("Submit").attr("id", "regSubBtn").appendTo($birthDate);
 
             //created a div and gave it the class of div-welcome
-            const $formDiv = $("<div>").appendTo($divContainer);
-            console.log(regForm);
+            $formDiv.appendTo(divRef);
+            console.log(divRef);
 
         }
     }
