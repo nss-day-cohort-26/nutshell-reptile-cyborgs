@@ -9,6 +9,7 @@ const regForm = Object.create({}, {
             const divRef = document.querySelector(".divContainer");
 
             //The Title Of The Registration Form
+            const $formDiv = $("<div>")
             const $regTitle = $("<h2>").attr("id", "regTitle").text("Registration Form").appendTo($formDiv);
 
             //The form fields containing the fields and ID's
@@ -20,7 +21,7 @@ const regForm = Object.create({}, {
             const $regSubBtn = $("<button>").attr("type", "button").text("Submit").attr("id", "regSubBtn").appendTo($birthDate);
 
             //created a div and gave it the class of div-welcome
-            const $formDiv = $("<div>").appendTo($divContainer);
+            $formDiv.appendTo(divRef);
             console.log(regForm);
 
 
