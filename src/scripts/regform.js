@@ -6,7 +6,7 @@ const regForm = Object.create({}, {
         value: () => {
 
             // Selects the main div class .div--container on the index
-            const divRef = document.querySelector(".divContainer");
+            const divRef = document.querySelector(".div--container");
 
             //The Title Of The Registration Form
             const $formDiv = $("<div>")
@@ -22,7 +22,7 @@ const regForm = Object.create({}, {
 
             //created a div and gave it the class of div-welcome
             $formDiv.appendTo(divRef);
-            console.log(regForm);
+            console.log(divRef);
 
 
         }
