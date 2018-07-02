@@ -1,7 +1,7 @@
 // added Jquery library
 const $ = require("jquery")
 
-const RegForm = Object.create({}, {
+const regForm = Object.create({}, {
     buildRegForm: {
         value: () => {
 
