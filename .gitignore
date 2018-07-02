@@ -1,3 +1,10 @@
 node_modules
 .DS_Store
 dist
+__pycache__
+*.pyc
+bin
+obj
+*.db
+*.sqlite3
+.vscode
