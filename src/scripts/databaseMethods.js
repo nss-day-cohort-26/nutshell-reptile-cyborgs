@@ -7,7 +7,7 @@ const databaseMethods = Object.create({}, {
     postUser: {
         value: () => {
             return $.ajax({
-                url: "http://localhost:3000/welcome",
+                url: "http://localhost:3000/user",
                 method: "POST"
 
             })
@@ -16,7 +16,7 @@ const databaseMethods = Object.create({}, {
 
     getAllUsers: {
         value: () => {
-            return $.ajax("http://localhost:3000/welcome")
+            return $.ajax("http://localhost:3000/user")
         }
     }
 })
