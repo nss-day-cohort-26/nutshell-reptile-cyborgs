@@ -12,13 +12,8 @@ body.addEventListener("click", () => {
     regForm.buildRegForm();
   }
   else if (event.target.id === "regSubBtn") {
-<<<<<<< HEAD
     clear();
     let namedFuction = {}
-=======
-    addUser();
-    clear();
->>>>>>> e5ccbc3e99be52e920aac91a211c8d0dc69d3e98
   }
 })
 
