@@ -12,12 +12,11 @@ body.addEventListener("click", () => {
     regForm.buildRegForm();
   }
   else if (event.target.id === "regSubBtn") {
-    addUser();
+    addUser ();
     clear();
   }
+  else if (event.target.id === "loginButton") {
+    clear();
+    loginForm.buildLoginForm();
+}
 })
-
-
-
-
-
