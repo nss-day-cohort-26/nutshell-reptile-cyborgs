@@ -4,6 +4,7 @@ const $ = require("jquery");
 const regForm = require("./regform")
 const clear = require ("./clear")
 const addUser = require("./addUser")
+const login = require("./loginForm")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -17,6 +18,6 @@ body.addEventListener("click", () => {
   }
   else if (event.target.id === "loginButton") {
     clear();
-    loginForm.buildLoginForm();
+    login.buildLoginForm();
 }
 })
