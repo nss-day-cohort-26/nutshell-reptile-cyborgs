@@ -3,6 +3,7 @@
 const $ = require("jquery");
 const regForm = require("./regform")
 const clear = require ("./clear")
+const addUser = require("./addUser")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -11,8 +12,8 @@ body.addEventListener("click", () => {
     regForm.buildRegForm();
   }
   else if (event.target.id === "regSubBtn") {
+    addUser();
     clear();
-    let namedFuction = {}
   }
 })
 
