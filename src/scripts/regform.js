@@ -12,7 +12,7 @@ const regForm = Object.create({}, {
             const divRef = document.querySelector(".div--container");
 
             //The Title Of The Registration Form
-            const $formDiv = $("<div>")
+            const $formDiv = $("<div>").attr("id", "regFormContainer");
             const $regTitle = $("<h2>").attr("id", "regTitle").text("Registration Form").appendTo($formDiv);
 
             //The form fields containing the fields and ID's
@@ -31,7 +31,7 @@ const regForm = Object.create({}, {
             const $paraPassword = $("<p>").text("Password: ")
             const $regPass = $("<input>").attr("type", "password").attr("id", "regPass").attr("placeholder", "Password").appendTo($paraPassword);
             $paraPassword.appendTo($formDiv)
-            const $paraBirthDate = $("<p>").text("BirthDate: ")
+            const $paraBirthDate = $("<p>").text("BirthDate:").appendTo($formDiv);
             const $birthDate = $("<input>").attr("type", "date").attr("id", "birthDate").attr("placeholder", "Birth Date").appendTo($paraBirthDate);
             $birthDate.appendTo($formDiv)
 
