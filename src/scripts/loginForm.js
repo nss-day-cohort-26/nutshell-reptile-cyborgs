@@ -3,6 +3,7 @@
 
 // added Jquery library
 const $ = require("jquery")
+const login = require("./eventListeners")
 
 const loginForm = Object.create({}, {
     buildLoginForm: {
