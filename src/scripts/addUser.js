@@ -22,8 +22,9 @@ const addUser = () =>{
    databaseMethod.getAllUsers().then((response)=>{
    response.forEach(element => {
        console.log("element", element)
-       if(name ===  element.name){
+       if(name.toUpperCase() ===  element.name.toUpperCase()){
            isDuplicate = true;
+           alert("User exists")
         }
        })
    if(isDuplicate === false){
