@@ -5,10 +5,11 @@ const $ = require("jquery");
 
 const databaseMethods = Object.create({}, {
     postUser: {
-        value: () => {
+        value: (user) => {
             return $.ajax({
                 url: "http://localhost:3000/user",
-                method: "POST"
+                method: "POST",
+                data:user
 
             })
         }
