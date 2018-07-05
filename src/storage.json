@@ -31,9 +31,24 @@
       "password": "password",
       "birthday": "1987-10-12",
       "id": 3
+    },
+    {
+      "name": "sam",
+      "displayName": "sammy",
+      "email": "sam@email.com",
+      "password": "password",
+      "birthday": "1999-06-23",
+      "id": 4
+    },
+    {
+      "name": "jack",
+      "displayName": "jackie",
+      "email": "mail@email.com",
+      "password": "password",
+      "birthday": "1299-06-22",
+      "id": 5
     }
   ],
-
   "news": [
     {
       "id": 0,
@@ -43,7 +58,6 @@
       "article-url": "http://www.testurl.com"
     }
   ],
-  
   "events": [
     {
       "description": "Test_Description",
