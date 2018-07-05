@@ -21,7 +21,7 @@ const userHome = Object.create({}, {
         <a class="nav-link" href="#">Friends List <span class="sr-only">(current)</span></a>
 </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">News</a>
+        <a class="nav-link" id = "news" href="#">News</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Tasks</a>
