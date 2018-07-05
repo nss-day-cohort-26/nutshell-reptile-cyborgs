@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "name": "Test_Name",
       "id": 0,
@@ -9,36 +9,36 @@
       "birthday": "Test_Birthday"
     }
   ],
-// JULY 4TH CODING
-  // "event":[
-  //   {
-  //   "description": "Test_Description",
-  //   "date": "2019-01-01",
-  //   "location": "Test_Location",
-  //   "userID": "0"  
-  //   }
-  // ],
 
-  // "friend":[
-  //   {
-  //   "userID": "0",
-  //   "friendID":"1"
-  //   }
-  // ],
+  "events": [
+    {
+    "description": "Test_Description",
+    "date": "2019-01-01",
+    "location": "Test_Location",
+    "userID": "0"  
+    }
+  ],
 
-  // "message": [
-  //   {
-  //   "message-content": "Test_Message",
-  //   "friendID": "?",
-  //   "userID": "0"
-  //   }
-  // ],
+  "friends":[
+    {
+    "userID": "0",
+    "friendID":"1"
+    }
+  ],
 
-  // "news": [
-  //   {
-  //   "article-content": "Test_Content",
-  //   "date": "2019-01-01",
-  //   "userID": "0"
-  //   }
-  // ]
+  "messages": [
+    {
+    "message-content": "Test_Message",
+    "friendID": "",
+    "userID": "0"
+    }
+  ],
+
+  "news": [
+    {
+    "article-content": "Test_Content",
+    "date": "2019-01-01",
+    "userID": "0"
+    }
+  ]
 }
