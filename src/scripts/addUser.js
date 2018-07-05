@@ -33,7 +33,6 @@ const addUser = () =>{
        databaseMethod.postUser(user)
    }
    })
-   clear()
 }
 module.exports = addUser;
 

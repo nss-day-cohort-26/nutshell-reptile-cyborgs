@@ -18,6 +18,7 @@ body.addEventListener("click", () => {
   else if (event.target.id === "regSubBtn") {
     addUser ();
     clear();
+    userHome.buildUserHome();
   }
   else if (event.target.id === "loginButton") {
     clear();
@@ -38,6 +39,7 @@ body.addEventListener("click", () => {
           })
               if (isDuplicate===false){
                   alert("Incorrect Login Please Login or sign up")
+                  clear()
                   welcome.buildWelcome();
           }
 
