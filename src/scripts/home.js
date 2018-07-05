@@ -1,13 +1,14 @@
 // Author: Aaron Miller
-// Purpose: to provide landscape for user home 
+// Purpose: to provide landscape for user home
 
 const $ = require("jquery")
 const databaseMethod = require("./databaseMethods")
 
-//User Header and seach bar&button//
+//User Header and search bar&button//
 const userHome = Object.create({}, {
     buildUserHome: {
         value: () => {
+            console.log("inside buildUserHome")
 
             const divRef = document.querySelector(".div--container");
 
@@ -24,6 +25,7 @@ const userHome = Object.create({}, {
             const $contentContainerDiv = $("<div>").attr("id", "contentContainerDiv").appendTo($userContainerDiv);
 
             const $userContentSection = $("<section>").attr("id", "userContentSection").appendTo($userContainerDiv)
+            $userContainerDiv.appendTo(divRef)
         }
     }
 })

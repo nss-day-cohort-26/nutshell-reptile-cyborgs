@@ -5,6 +5,9 @@ const regForm = require("./regform")
 const clear = require ("./clear")
 const addUser = require("./addUser")
 const login = require("./loginForm")
+const userHome = require("./home")
+const databaseMethod = require("./databaseMethods")
+const welcome = require("./welcome")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -29,13 +32,14 @@ body.addEventListener("click", () => {
             console.log("element", element)
             if (name.toUpperCase() === element.name.toUpperCase()) {
                 isDuplicate = true;
-                //load or build home page
+                clear()
+                userHome.buildUserHome();
             }
-            else if (isDuplicate === false){
-                alert("Incorrect Login Please Login or sign up")
-                welcome.buildWelcome()
-        }
-        })
+          })
+              if (isDuplicate===false){
+                  alert("Incorrect Login Please Login or sign up")
+                  welcome.buildWelcome();
+          }
 
     })
 } //close of else if
