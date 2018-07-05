@@ -1,4 +1,3 @@
-/* 
 .div-welcome {
     display: flex;
     text-align: center;
@@ -34,8 +33,6 @@
 
 /* CSS For the New User Registration Form */
 
-
-/*
 .div--container {
     display: flex;
     text-align: center;
@@ -44,12 +41,12 @@
     background-color: #0582ef;
     border: 2px solid black;
     color: whitesmoke;
-    position: absolute;
+    /* position: absolute; */
     margin: auto;
-    top: 0;
+    /* top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; */
 }
 
 #regTitle {
@@ -64,6 +61,8 @@
     border-width: 5em;
     border-radius: .3em;
 }
-nav{
+
+
+/* nav {
     background-color: white;
 } */
