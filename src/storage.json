@@ -7,38 +7,50 @@
       "email": "@test.com",
       "password": "Test_Password",
       "birthday": "Test_Birthday"
+    },
+    {
+      "name": "Shuaib",
+      "displayName": "shu",
+      "email": "am@gmail.com",
+      "password": "password",
+      "birthday": "1977-03-10",
+      "id": 1
+    },
+    {
+      "name": "",
+      "displayName": "",
+      "email": "Shuaib",
+      "password": "password",
+      "birthday": "",
+      "id": 2
     }
   ],
-
   "events": [
     {
-    "description": "Test_Description",
-    "date": "2019-01-01",
-    "location": "Test_Location",
-    "userID": "0"  
+      "description": "Test_Description",
+      "date": "2019-01-01",
+      "location": "Test_Location",
+      "userID": "0"
     }
   ],
-
-  "friends":[
+  "friends": [
     {
-    "userID": "0",
-    "friendID":"1"
+      "userID": "0",
+      "friendID": "1"
     }
   ],
-
   "messages": [
     {
-    "message-content": "Test_Message",
-    "friendID": "",
-    "userID": "0"
+      "message-content": "Test_Message",
+      "friendID": "",
+      "userID": "0"
     }
   ],
-
   "news": [
     {
-    "article-content": "Test_Content",
-    "date": "2019-01-01",
-    "userID": "0"
+      "article-content": "Test_Content",
+      "date": "2019-01-01",
+      "userID": "0"
     }
   ]
 }
