@@ -3,6 +3,8 @@
 
 // added Jquery library
 const $ = require("jquery")
+const databaseMethod = require("./databaseMethods.js")
+const welcome = require("./welcome")
 
 const loginForm = Object.create({}, {
     buildLoginForm: {
@@ -29,10 +31,8 @@ const loginForm = Object.create({}, {
             //created a div and gave it the class of div-welcome
             $formDiv.appendTo(divRef);
             console.log(divRef);
-
         }
     }
 })
 
 module.exports = loginForm;
-

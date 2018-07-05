@@ -5,6 +5,9 @@ const regForm = require("./regform")
 const clear = require ("./clear")
 const addUser = require("./addUser")
 const login = require("./loginForm")
+const userHome = require("./home")
+const databaseMethod = require("./databaseMethods")
+const welcome = require("./welcome")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -20,4 +23,24 @@ body.addEventListener("click", () => {
     clear();
     login.buildLoginForm();
 }
+  else if (event.target.id === "submitLoginButton"){
+    //get values from input field and test for user and passoword
+    const name = document.getElementById("nameInput").value;
+    let isDuplicate = false;
+    databaseMethod.getAllUsers().then((response) => {
+        response.forEach(element => {
+            console.log("element", element)
+            if (name.toUpperCase() === element.name.toUpperCase()) {
+                isDuplicate = true;
+                clear()
+                userHome.buildUserHome();
+            }
+          })
+              if (isDuplicate===false){
+                  alert("Incorrect Login Please Login or sign up")
+                  welcome.buildWelcome();
+          }
+
+    })
+} //close of else if
 })
