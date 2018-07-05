@@ -23,6 +23,22 @@
       "password": "password",
       "birthday": "",
       "id": 2
+    },
+    {
+      "name": "joe",
+      "displayName": "joey",
+      "email": "joe@email.com",
+      "password": "password",
+      "birthday": "1974-06-25",
+      "id": 3
+    },
+    {
+      "name": "sam",
+      "displayName": "sammy",
+      "email": "sam@email.com",
+      "password": "password",
+      "birthday": "1974-09-25",
+      "id": 4
     }
   ],
   "events": [
