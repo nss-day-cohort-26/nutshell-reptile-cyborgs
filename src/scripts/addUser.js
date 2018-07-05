@@ -2,37 +2,39 @@
 //purpose Add user to database
 const $ = require("jquery")
 const databaseMethod = require("./databaseMethods")
-const clear =require("./clear")
+const clear = require("./clear")
 
-const addUser = () =>{
+const addUser = () => {
     const name = document.getElementById("nameInput").value;
     const displayName = document.getElementById("displayName").value;
     const email = document.getElementById("regEmail").value;
     const password = document.getElementById("regPass").value;
     const birthDate = document.getElementById("birthDate").value;
 
-   const user = {
-       name:name,
-       displayName:displayName,
-       email:email,
-       password:password,
-       birthday:birthDate
-   };
-   let isDuplicate = false;
-   databaseMethod.getAllUsers().then((response)=>{
-   response.forEach(element => {
-       console.log("element", element)
-       if(name.toUpperCase() ===  element.name.toUpperCase()){
-           isDuplicate = true;
-           alert("User exists")
-           const welcome = require("./welcome")
-           welcome.buildWelcome()
+    const user = {
+        name: name,
+        displayName: displayName,
+        email: email,
+        password: password,
+        birthday: birthDate
+    };
+    let isDuplicate = false;
+    databaseMethod.getAllUsers().then((response) => {
+        response.forEach(element => {
+            console.log("element", element)
+            if (name.toUpperCase() === element.name.toUpperCase()) {
+                isDuplicate = true;
+                alert("User exists")
+                const welcome = require("./welcome")
+                welcome.buildWelcome()
+            }
+        })
+        if (isDuplicate === false) {
+            databaseMethod.postUser(user)
+            clear();
+            userHome.buildUserHome();
         }
-       })
-   if(isDuplicate === false){
-       databaseMethod.postUser(user)
-   }
-   })
+    })
 }
 module.exports = addUser;
 

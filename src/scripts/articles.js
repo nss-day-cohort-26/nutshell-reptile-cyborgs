@@ -1,3 +1,5 @@
+//authors: Shu
+//purpose: crates dom for articles
 const $ = require("jquery")
 const databaseMethod = require("./databaseMethods")
 const userHome = require("./home")
