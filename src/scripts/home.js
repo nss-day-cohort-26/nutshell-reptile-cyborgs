@@ -2,8 +2,15 @@
 const $ = require("jquery")
 
 const navBar = document.querySelector("#navBar")
+const databaseMethod = require("./databaseMethods")
 
-navBar.innerHTML = `
+
+//User Header and search bar&button//
+const userHome = Object.create({}, {
+    buildUserHome: {
+        value: () => {
+
+            navBar.innerHTML = `
 <a class="navbar-brand" href="#">Navbar</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,88 +32,25 @@ navBar.innerHTML = `
     </ul>
   </div>
   `
+            console.log("inside buildUserHome")
 
+            const divRef = document.querySelector(".div--container");
 
-//Create an object containing the navbar
+            const $userContainerDiv = $("<div>").attr("id", "userHeaderContainer");
 
-// const navBarMain = Object.create({}, {
-//     buildNavBar: {
-//         value: () => {
+            const $userNameTitle = $("<h1>").attr("id", "userNameTitle").text({}).appendTo($userContainerDiv);
 
-//             // Selects the main div class .div--container on the index
-//             const divRef = document.querySelector(".div--container");
+            const $labelSearchBar = $("<label>").text("Search:");
+            const $searchInput = $("<input>").attr("id", "searchInput").attr("placeholder", "Search").appendTo($labelSearchBar);
+            $labelSearchBar.appendTo($userContainerDiv);
 
-//             //Create the Nav tag and give it a class.
-//             const $navEl = $("<nav>").addClass("navbar navbar-expand-lg navbar-light bg-light").appendTo(divRef);
-//             // Create the Navbar links
+            const $searchButton = $("<button>").attr("type", "button").text("Search").attr("id", "searchButton").appendTo($userContainerDiv);
 
-//             const $navDivEl = $("<div>").addClass("collapse navbar-collapse").attr("id", "navbarNav").appendTo($navEl);
-//             const $navUl = $("<ul>").addClass("navbar-nav").appendTo($navDivEl);
-//             const $navLi1 = $("li").addClass("nav-item active").appendTo($navUl);
-//             const $aFriendsList = $("<a>").addClass("nav-link").text("Friends List").appendTo($navLi1);
+            const $contentContainerDiv = $("<div>").attr("id", "contentContainerDiv").appendTo($userContainerDiv);
 
-//             //         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-//             //       </li>
-//             //       <li class="nav-item">
-//             //         <a class="nav-link" href="#">Features</a>
-//             //       </li>
-//             //       <li class="nav-item">
-//             //         <a class="nav-link" href="#">Pricing</a>
-//             //       </li>
-//             //       <li class="nav-item">
-//             //         <a class="nav-link disabled" href="#">Disabled</a>
-//             //       </li>
-//             //     </ul>
-//             //   </div>
-
-
-//         }
-//     }
-// })
-
-// module.exports = navBarMain;
-
-// //Bootstrap NavBar
-// < nav class = "navbar navbar-expand-lg navbar-light bg-light" >
-//     <
-//     a class = "navbar-brand"
-// href = "#" > Navbar < /a> <
-//     button class = "navbar-toggler"
-// type = "button"
-// data - toggle = "collapse"
-// data - target = "#navbarNav"
-// aria - controls = "navbarNav"
-// aria - expanded = "false"
-// aria - label = "Toggle navigation" >
-//     <
-//     span class = "navbar-toggler-icon" > < /span> <
-//     /button> <
-//     div class = "collapse navbar-collapse"
-// id = "navbarNav" >
-//     <
-//     ul class = "navbar-nav" >
-//     <
-//     li class = "nav-item active" >
-//     <
-//     a class = "nav-link"
-// href = "#" > Home < span class = "sr-only" > (current) < /span></a >
-//     <
-//     /li> <
-//     li class = "nav-item" >
-//     <
-//     a class = "nav-link"
-// href = "#" > Features < /a> <
-//     /li> <
-//     li class = "nav-item" >
-//     <
-//     a class = "nav-link"
-// href = "#" > Pricing < /a> <
-//     /li> <
-//     li class = "nav-item" >
-//     <
-//     a class = "nav-link disabled"
-// href = "#" > Disabled < /a> <
-//     /li> <
-//     /ul> <
-//     /div> <
-//     /nav>
+            const $userContentSection = $("<section>").attr("id", "userContentSection").appendTo($userContainerDiv)
+            $userContainerDiv.appendTo(divRef)
+        }
+    }
+})
+module.exports = userHome;
