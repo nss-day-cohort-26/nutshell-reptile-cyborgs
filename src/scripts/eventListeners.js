@@ -46,8 +46,9 @@ body.addEventListener("click", () => {
 
     })
 } //close of else if
-  else if(event.target.id === "addArticle"){
-    article.addArticles();
+  else if(event.target.id === "news"){
+    clear()
+    articles.addArticle();
   }
   else if(event.target.id === "deleteArticle"){
     //call to delete
