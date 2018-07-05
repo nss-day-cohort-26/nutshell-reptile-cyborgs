@@ -8,6 +8,7 @@ const login = require("./loginForm")
 const userHome = require("./home")
 const databaseMethod = require("./databaseMethods")
 const welcome = require("./welcome")
+const articles = require("./articles")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -24,7 +25,7 @@ body.addEventListener("click", () => {
     login.buildLoginForm();
 }
   else if (event.target.id === "submitLoginButton"){
-    //get values from input field and test for user and passoword
+    //get values from input field and test for user and password
     const name = document.getElementById("nameInput").value;
     let isDuplicate = false;
     databaseMethod.getAllUsers().then((response) => {
@@ -43,4 +44,10 @@ body.addEventListener("click", () => {
 
     })
 } //close of else if
+  else if(event.target.id === "addArticle"){
+    article.addArticles();
+  }
+  else if(event.target.id === "deleteArticle"){
+    //call to delete
+  }
 })
