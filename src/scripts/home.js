@@ -27,7 +27,7 @@ const userHome = Object.create({}, {
         }
     }
 })
-
+module.exports = userHome;
 
 
 
