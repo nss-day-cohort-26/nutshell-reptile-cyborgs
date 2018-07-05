@@ -23,8 +23,27 @@
       "password": "password",
       "birthday": "",
       "id": 2
+    },
+    {
+      "name": "baller4life",
+      "displayName": "Aaron",
+      "email": "mill@gmail.com",
+      "password": "password",
+      "birthday": "1987-10-12",
+      "id": 3
     }
   ],
+
+  "news": [
+    {
+      "id": 0,
+      "userID": "0",
+      "article-title": "Test_Title",
+      "article-content": "Test_Content",
+      "article-url": "http://www.testurl.com"
+    }
+  ],
+  
   "events": [
     {
       "description": "Test_Description",
@@ -43,13 +62,6 @@
     {
       "message-content": "Test_Message",
       "friendID": "",
-      "userID": "0"
-    }
-  ],
-  "news": [
-    {
-      "article-content": "Test_Content",
-      "date": "2019-01-01",
       "userID": "0"
     }
   ]

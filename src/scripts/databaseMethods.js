@@ -9,7 +9,7 @@ const databaseMethods = Object.create({}, {
             return $.ajax({
                 url: "http://localhost:3000/users",
                 method: "POST",
-                data:user
+                data: user
 
             })
         }
@@ -19,6 +19,35 @@ const databaseMethods = Object.create({}, {
         value: () => {
             return $.ajax("http://localhost:3000/users")
         }
+    },
+
+    addArticles: {
+        value: (articles) => {
+            return $.ajax({
+                url: "http://localhost:3000/news",
+                method: "POST",
+                data: articles
+
+            })
+        }
+    },
+
+    getAllArticles: {
+        value: () => {
+            return $.ajax("http://localhost:3000/news")
+        }
+    },
+
+    deleteArticles: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/news/${id}`,
+                method: "DELETE",
+                data: articles
+            })
+        }
     }
 })
+
 module.exports = databaseMethods;
+
