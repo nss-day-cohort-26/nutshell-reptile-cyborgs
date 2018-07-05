@@ -39,9 +39,9 @@ const databaseMethods = Object.create({}, {
     },
 
     deleteArticles: {
-        value: (articles) => {
+        value: (id) => {
             return $.ajax({
-                url: "http://localhost:3000/news",
+                url: `http://localhost:3000/news/${id}`,
                 method: "DELETE",
                 data: articles
             })
@@ -50,3 +50,4 @@ const databaseMethods = Object.create({}, {
 })
 
 module.exports = databaseMethods;
+
