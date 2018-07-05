@@ -20,4 +20,23 @@ body.addEventListener("click", () => {
     clear();
     login.buildLoginForm();
 }
+  else if (event.target.id === "submitLoginButton"){
+    //get values from input field and test for user and passoword
+    const name = document.getElementById("nameInput").value;
+    let isDuplicate = false;
+    databaseMethod.getAllUsers().then((response) => {
+        response.forEach(element => {
+            console.log("element", element)
+            if (name.toUpperCase() === element.name.toUpperCase()) {
+                isDuplicate = true;
+                //load or build home page
+            }
+            else if (isDuplicate === false){
+                alert("Incorrect Login Please Login or sign up")
+                welcome.buildWelcome()
+        }
+        })
+
+    })
+} //close of else if
 })
