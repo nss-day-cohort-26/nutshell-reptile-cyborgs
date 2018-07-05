@@ -25,6 +25,8 @@ const addUser = () =>{
        if(name.toUpperCase() ===  element.name.toUpperCase()){
            isDuplicate = true;
            alert("User exists")
+           const welcome = require("./welcome")
+           welcome.buildWelcome()
         }
        })
    if(isDuplicate === false){
