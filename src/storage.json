@@ -57,6 +57,15 @@
       "id": 6
     },
     {
+
+      "name": "Tom",
+      "displayName": "Tom",
+      "email": "tom@tom.com",
+      "password": "password",
+      "birthday": "1999-06-22",
+      "id": 7
+    },
+    {
       "name": "Emily",
       "displayName": "Emily",
       "email": "email@email.com",
@@ -71,6 +80,7 @@
       "password": "email",
       "birthday": "",
       "id": 8
+
     }
   ],
   "news": [
@@ -82,21 +92,9 @@
       "url": "http://www.testurl.com"
     },
     {
-      "title": "",
-      "content": "",
-      "url": "",
-      "id": 1
-    },
-    {
-      "title": "",
-      "content": "",
-      "url": "",
-      "id": 2
-    },
-    {
-      "title": "",
-      "content": "",
-      "url": "",
+      "title": "apple",
+      "content": "apple",
+      "url": "http://www.orange.com",
       "id": 3
     },
     {
@@ -106,9 +104,9 @@
       "id": 4
     },
     {
-      "title": "",
-      "content": "",
-      "url": "",
+      "title": "fruit",
+      "content": "fruti",
+      "url": "fruit.com",
       "id": 5
     },
     {
@@ -118,9 +116,9 @@
       "id": 6
     },
     {
-      "title": "",
-      "content": "",
-      "url": "",
+      "title": "blue",
+      "content": "blue",
+      "url": "blue.com",
       "id": 7
     },
     {
@@ -130,34 +128,10 @@
       "id": 8
     },
     {
-      "title": "",
-      "content": "",
-      "url": "",
+      "title": "red",
+      "content": "red",
+      "url": "red.com",
       "id": 9
-    },
-    {
-      "title": "",
-      "content": "",
-      "url": "",
-      "id": 10
-    },
-    {
-      "title": "",
-      "content": "",
-      "url": "",
-      "id": 11
-    },
-    {
-      "title": "",
-      "content": "",
-      "url": "",
-      "id": 12
-    },
-    {
-      "title": "",
-      "content": "",
-      "url": "",
-      "id": 13
     }
   ],
   "events": [
