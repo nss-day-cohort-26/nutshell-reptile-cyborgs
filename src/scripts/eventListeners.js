@@ -9,6 +9,7 @@ const userHome = require("./home")
 const databaseMethod = require("./databaseMethods")
 const welcome = require("./welcome")
 const articles = require("./articles")
+const addArticle = require("./addArticle")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -43,10 +44,13 @@ body.addEventListener("click", () => {
   } //close of else if
   else if (event.target.id === "news") {
     clear()
-    articles.addArticle();
-  } else if (event.target.id === "addArticle") {
-    //bulma modal
-  } else if (event.target.id === "deleteArticle") {
+    articles.articleDOM();
+  }
+  else if (event.target.id === "addArticle") {
+   clear()
+   addArticle.addArticle();
+  }
+  else if (event.target.id === "deleteArticle") {
     //call to delete
   }
 })

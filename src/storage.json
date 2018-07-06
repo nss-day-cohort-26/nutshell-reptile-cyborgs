@@ -47,15 +47,41 @@
       "password": "password",
       "birthday": "1299-06-22",
       "id": 5
+    },
+    {
+      "name": "fred",
+      "displayName": "fred",
+      "email": "fred",
+      "password": "passwrod",
+      "birthday": "2018-07-09",
+      "id": 6
     }
   ],
   "news": [
     {
       "id": 0,
       "userID": "0",
-      "article-title": "Test_Title",
-      "article-content": "Test_Content",
-      "article-url": "http://www.testurl.com"
+      "title": "Test_Title",
+      "content": "Test_Content",
+      "url": "http://www.testurl.com"
+    },
+    {
+      "title": "",
+      "content": "",
+      "url": "",
+      "id": 1
+    },
+    {
+      "title": "",
+      "content": "",
+      "url": "",
+      "id": 2
+    },
+    {
+      "title": "",
+      "content": "",
+      "url": "",
+      "id": 3
     }
   ],
   "events": [

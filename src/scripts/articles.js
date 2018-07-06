@@ -6,14 +6,14 @@ const userHome = require("./home")
 
 
 const article = Object.create({}, {
-    addArticle: {
+    articleDOM: {
         value: () => {
             console.log("inside article.js")
             userHome.buildUserHome();
-            const divRef = document.querySelector(".div--container");
-            const addArticleButton = $("<button>").attr("id", "addArticle").appendTo(divRef).text("Add Article")
+            const secRef = document.querySelector("#userContentSection");
+            const addArticleButton = $("<button>").attr("id", "addArticle").appendTo(secRef).text("Add Article")
             //needs to add article by article id
-            const $article = $("<article>").attr("id", "idValue").appendTo(divRef)
+            const $article = $("<article>").attr("id", "idValue").appendTo(secRef)
             const $deleteButton = $("<button>").attr("id", "deleteArticle").appendTo($article).text("Delete")
 
         }
