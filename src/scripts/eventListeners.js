@@ -49,6 +49,7 @@ body.addEventListener("click", () => {
     else if (event.target.id === "news") {
         clear()
         articles.articleDOM();
+        allArticlesDOM.projectArticle();
     } else if (event.target.id === "addArticle") {
         clear()
         addArticle.addArticle();
@@ -63,4 +64,13 @@ body.addEventListener("click", () => {
         articles.articleDOM();
         allArticlesDOM.projectArticle()
     }
+   else if (event.target.id === "articleDel"){
+        const id = $(event.target).parent().attr("id");
+        databaseMethod.deleteArticles(id).then(() => {
+        clear();
+        articles.articleDOM();
+        allArticlesDOM.projectArticle()
+        })
+   }
+
 })
