@@ -142,7 +142,31 @@ function returnBuilder(){
 
 }
 ```
-### Function to get data from the Request Form
+### Example of how i accessed json server in small business exercise
+```javascript
+getEmployeeStatus().then((statusResponse)=>{
+    console.log("response",statusResponse)
+    statusResponse.forEach(element =>{
+        console.log("element employee id",element.employeeId)
+        const $artEmployee = $("<article>").addClass("employee")
+        getEmployee(element.employeeId).then((employeeResponse) =>{
+            console.log(employeeResponse.name)
+            $artEmployee.text(employeeResponse.name).appendTo(divRef)
+            getDepartment(element.departmentId).then((departmentResponse)=>{
+                const $paraDepart =$("<p>").addClass("employee-department").text(departmentResponse.department).appendTo($artEmployee)
+                    getComputer(element.computerId).then((computerResponse)=>{
+                        const $paraComputer =$("<p>").addClass("employee-computer").text(computerResponse.computer).appendTo($artEmployee)
+                    
+                })
+                
+            })
+        })
+    }
+)
+
+
+})
+```
 
 
 
