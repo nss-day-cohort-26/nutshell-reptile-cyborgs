@@ -12,6 +12,8 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 
+
+//if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
   if (event.target.id === "registerButton") {
