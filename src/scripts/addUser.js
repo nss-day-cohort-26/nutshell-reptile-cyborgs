@@ -10,7 +10,7 @@ const addUser = () => {
     const email = document.getElementById("regEmail").value;
     const password = document.getElementById("regPass").value;
     const birthDate = document.getElementById("birthDate").value;
-
+// add user, check if duplicate. If not, add a new user. If they exist, send back to welcome page.
     const user = {
         name: name,
         displayName: displayName,
