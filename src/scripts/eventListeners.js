@@ -10,6 +10,7 @@ const databaseMethod = require("./databaseMethods")
 const welcome = require("./welcome")
 const articles = require("./articles")
 const addArticle = require("./addArticle")
+const allArticlesDOM = require("./allArticlesDOM")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -46,11 +47,15 @@ body.addEventListener("click", () => {
     clear()
     articles.articleDOM();
   }
-  else if (event.target.id === "addArticle") {
-   clear()
-   addArticle.addArticle();
+   else if (event.target.id === "addArticle") {
+    clear()
+    addArticle.addArticle();
   }
-  else if (event.target.id === "deleteArticle") {
-    //call to delete
+  // else if (event.target.id === "deleteArticle") {
+  //   //call to delete
+  // }
+  else if (event.target.id === "articleSubmit") {
+    console.log("article submit was pressed")
+    allArticlesDOM.projectArticle()
   }
 })
