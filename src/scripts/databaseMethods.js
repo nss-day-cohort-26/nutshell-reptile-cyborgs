@@ -50,8 +50,33 @@ const databaseMethods = Object.create({}, {
                 method: "DELETE"
             })
         }
+    },
+
+    postTask: {
+        valule: (task) => {
+            return $.ajax({
+                url: "http://localhost:3000/tasks/",
+                method: "POST",
+                data: tasks
+            })
+
+        }
+
+
+    },
+    getAllTasks: {
+        value: () => {
+            return $.ajax("http://localhost:3000/tasks")
+        }
+    },
+    putTask: {
+        value: (id) => {
+            $.ajax({
+                url: `http://localhost:3000/tasks/${id}`,
+                method: "PUT"
+            })
+        }
     }
 })
 
 module.exports = databaseMethods;
-

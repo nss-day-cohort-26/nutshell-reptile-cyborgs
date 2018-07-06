@@ -63,14 +63,13 @@ body.addEventListener("click", () => {
         clear();
         articles.articleDOM();
         allArticlesDOM.projectArticle()
-    }
-   else if (event.target.id === "articleDel"){
+    } else if (event.target.id === "articleDel") {
         const id = $(event.target).parent().attr("id");
         databaseMethod.deleteArticles(id).then(() => {
-        clear();
-        articles.articleDOM();
-        allArticlesDOM.projectArticle()
+            clear();
+            articles.articleDOM();
+            allArticlesDOM.projectArticle()
         })
-   }
+    }
 
 })
