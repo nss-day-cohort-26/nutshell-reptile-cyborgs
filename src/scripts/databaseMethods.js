@@ -37,6 +37,11 @@ const databaseMethods = Object.create({}, {
             return $.ajax("http://localhost:3000/news")
         }
     },
+    getAnArticle: {
+        value: (id) => {
+            return $.ajax(`http://localhost:3000/news/${id}`)
+        }
+    },
 
     deleteArticles: {
         value: (id) => {
