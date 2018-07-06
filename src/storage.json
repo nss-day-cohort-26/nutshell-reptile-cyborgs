@@ -57,12 +57,30 @@
       "id": 6
     },
     {
+
       "name": "Tom",
       "displayName": "Tom",
       "email": "tom@tom.com",
       "password": "password",
       "birthday": "1999-06-22",
       "id": 7
+    },
+    {
+      "name": "Emily",
+      "displayName": "Emily",
+      "email": "email@email.com",
+      "password": "emily",
+      "birthday": "1990-03-14",
+      "id": 7
+    },
+    {
+      "name": "emily@email.com",
+      "displayName": "",
+      "email": "email@email.com",
+      "password": "email",
+      "birthday": "",
+      "id": 8
+
     }
   ],
   "news": [
