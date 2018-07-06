@@ -7,10 +7,10 @@ const databaseMethods = require("./databaseMethods")
 const addArticleToDOM = Object.create({}, {
     projectArticle: {
         value: () => {
-            const $artRef = $("<article>").addClass("article")
 
             databaseMethods.getAllArticles().then((responseArticle) =>
                 responseArticle.forEach(element => {
+                    const $artRef = $("<article>").addClass("article")
                     console.log("element", element)
                     const $pArticleTitle = $("<p>").text(`${element.title}`).appendTo($artRef)
                     const $pArticleContent = $("<p>").text(`${element.content}`).appendTo($pArticleTitle)

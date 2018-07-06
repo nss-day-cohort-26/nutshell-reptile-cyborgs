@@ -11,6 +11,7 @@ const welcome = require("./welcome")
 const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
+const subArticle = require("./subArticle")
 
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
@@ -57,7 +58,7 @@ body.addEventListener("click", () => {
     // }
     else if (event.target.id === "articleSubmit") {
         console.log("article submit was pressed")
-        addArticle.addArticle();
+        subArticle.subArticle();
         clear();
         articles.articleDOM();
         allArticlesDOM.projectArticle()
