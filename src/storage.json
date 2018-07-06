@@ -95,6 +95,7 @@
         }
     ],
     "events": [{
+        "eventName":"test",
         "description": "Test_Description",
         "date": "2019-01-01",
         "location": "Test_Location",

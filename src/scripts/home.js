@@ -31,7 +31,7 @@ const userHome = Object.create({}, {
         <a class="nav-link" href="#">Chat</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Events</a>
+        <a class="nav-link" id = "events" href="#">Events</a>
       </li>
     </ul>
   </div>

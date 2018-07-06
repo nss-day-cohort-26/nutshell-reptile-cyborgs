@@ -12,7 +12,8 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
-
+const eventForm = require("./eventForm")
+const subEvent = require("./subEvent")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -50,30 +51,32 @@ body.addEventListener("click", () => {
         clear()
         articles.articleDOM();
         allArticlesDOM.projectArticle();
-    }
-    else if (event.target.id === "addArticle") {
+    } else if (event.target.id === "addArticle") {
         clear()
         addArticle.addArticle();
-    }
-    // else if (event.target.id === "deleteArticle") {
-    //   //call to delete
-    // }
-    else if (event.target.id === "articleSubmit") {
+    } else if (event.target.id === "articleSubmit") {
         console.log("article submit was pressed")
         subArticle.subArticle();
         clear();
         articles.articleDOM();
         allArticlesDOM.projectArticle()
-    }
-    else if (event.target.id === "articleDel") {
+    } else if (event.target.id === "articleDel") {
         const id = $(event.target).parent().attr("id");
         databaseMethod.deleteArticles(id).then(() => {
             clear();
             articles.articleDOM();
             allArticlesDOM.projectArticle()
         })
-    }
-    else if (event.target.id === "tasks") {
+    } else if (event.target.id === "tasks") {
         addTask.addTask();
     }
+    // Start of events eventListeners
+    else if (event.target.id === "events") {
+        clear();
+        //call to event form builder
+        eventForm.eventForm()
+    } else if (event.target.id === "eventSubmit") {
+        subEvent.subEvent()
+    }
+    //end of event eventListeners
 })
