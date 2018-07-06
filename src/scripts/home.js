@@ -22,7 +22,7 @@ const userHome = Object.create({}, {
         <a class="nav-link" id="news" href="#">News</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Tasks</a>
+        <a class="nav-link" id="tasks" href="#">Tasks</a>
       </li>
     <li class="nav-item">
         <a class="nav-link" href="#">Friends Tasks</a>

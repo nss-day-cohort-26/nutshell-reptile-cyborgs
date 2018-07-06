@@ -50,7 +50,8 @@ body.addEventListener("click", () => {
         clear()
         articles.articleDOM();
         allArticlesDOM.projectArticle();
-    } else if (event.target.id === "addArticle") {
+    }
+    else if (event.target.id === "addArticle") {
         clear()
         addArticle.addArticle();
     }
@@ -63,7 +64,8 @@ body.addEventListener("click", () => {
         clear();
         articles.articleDOM();
         allArticlesDOM.projectArticle()
-    } else if (event.target.id === "articleDel") {
+    }
+    else if (event.target.id === "articleDel") {
         const id = $(event.target).parent().attr("id");
         databaseMethod.deleteArticles(id).then(() => {
             clear();
@@ -71,5 +73,7 @@ body.addEventListener("click", () => {
             allArticlesDOM.projectArticle()
         })
     }
-
+    else if (event.target.id === "tasks") {
+        addTask.addTask();
+    }
 })
