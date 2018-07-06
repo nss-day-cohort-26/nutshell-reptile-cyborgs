@@ -57,7 +57,6 @@
       "id": 6
     },
     {
-
       "name": "Tom",
       "displayName": "Tom",
       "email": "tom@tom.com",
@@ -80,7 +79,22 @@
       "password": "email",
       "birthday": "",
       "id": 8
-
+    },
+    {
+      "name": "Emi",
+      "displayName": "Emi",
+      "email": "emi@email.com",
+      "password": "emi",
+      "birthday": "1990-03-14",
+      "id": 9
+    },
+    {
+      "name": "em",
+      "displayName": "em",
+      "email": "em@email.com",
+      "password": "em",
+      "birthday": "1990-03-14",
+      "id": 10
     }
   ],
   "news": [
@@ -132,6 +146,18 @@
       "content": "red",
       "url": "red.com",
       "id": 9
+    },
+    {
+      "title": "",
+      "content": "",
+      "url": "",
+      "id": 10
+    },
+    {
+      "title": "Article",
+      "content": "Article",
+      "url": "Article.com",
+      "id": 11
     }
   ],
   "events": [
