@@ -105,6 +105,12 @@ const databaseMethods = Object.create({}, {
                 method: "DELETE"
             })
         }
+    },
+
+    getData: {
+        value: (resource) => {
+            return $.ajax(`http://localhost:3000/${resource}`)
+        }
     }
 })
 
