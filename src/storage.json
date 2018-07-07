@@ -80,6 +80,7 @@
             "id": 8
         }
     ],
+
     "news": [{
             "id": 0,
             "userID": "0",
@@ -94,21 +95,26 @@
             "id": 1
         }
     ],
+
     "events": [{
         "description": "Test_Description",
         "date": "2019-01-01",
         "location": "Test_Location",
         "userID": "0"
     }],
+
     "friends": [{
+        "id": 0,
         "userID": "0",
-        "friendID": "1"
+        "yourFriendID": "1"
     }],
+
     "messages": [{
         "message-content": "Test_Message",
         "friendID": "",
         "userID": "0"
     }],
+
     "tasks": [{
             "id": 0,
             "taskName": "",
