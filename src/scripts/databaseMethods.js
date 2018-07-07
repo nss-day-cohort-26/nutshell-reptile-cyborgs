@@ -83,7 +83,7 @@ const databaseMethods = Object.create({}, {
             return $.ajax({
                 url: "http://localhost:3000/events",
                 method: "POST",
-                data:event
+                data: event
             })
 
         }

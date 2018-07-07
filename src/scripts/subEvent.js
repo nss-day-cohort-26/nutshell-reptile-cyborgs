@@ -8,18 +8,14 @@ const subEvent = Object.create({}, {
             const $eventDescriptionValue = document.getElementById("eventDescription").value;
             const $eventLocationValue = document.getElementById("eventLocation").value;
             const $eventDateValue = document.getElementById("eventDate").value;
-            console.log($eventDateValue)
+            var myJSON = JSON.stringify($eventDateValue);
+            console.log($eventTitleValue,$eventDescriptionValue,$eventLocationValue, $eventDateValue)
             const event = {
                 eventName: $eventTitleValue,
                 description: $eventDescriptionValue,
-                date: $eventDateValue,
+                date: myJSON,
                 location:$eventLocationValue
             }
-        //     "eventName":"test",
-        // "description": "Test_Description",
-        // "date": "2019-01-01",
-        // "location": "Test_Location",
-
             databaseMethod.postEvent(event)
         }
     }
