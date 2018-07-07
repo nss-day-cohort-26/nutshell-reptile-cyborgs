@@ -14,6 +14,7 @@ const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
 const eventForm = require("./eventForm")
 const subEvent = require("./subEvent")
+const allEventsDOM = require("./allEventsDOM")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -32,7 +33,7 @@ body.addEventListener("click", () => {
         let isDuplicate = false;
         databaseMethod.getAllUsers().then((response) => {
             response.forEach(element => {
-                console.log("element", element)
+
                 if (name.toUpperCase() === element.name.toUpperCase()) {
                     isDuplicate = true;
                     clear()
@@ -55,7 +56,7 @@ body.addEventListener("click", () => {
         clear()
         addArticle.addArticle();
     } else if (event.target.id === "articleSubmit") {
-        console.log("article submit was pressed")
+
         subArticle.subArticle();
         clear();
         articles.articleDOM();
@@ -74,9 +75,12 @@ body.addEventListener("click", () => {
     else if (event.target.id === "events") {
         clear();
         //call to event form builder
+        allEventsDOM.projectEvents();
         eventForm.eventForm()
     } else if (event.target.id === "eventSubmit") {
         subEvent.subEvent()
+        clear();
+        allEventsDOM.projectEvents();
     }
     //end of event eventListeners
 })

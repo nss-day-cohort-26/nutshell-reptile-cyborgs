@@ -9,12 +9,12 @@ const subEvent = Object.create({}, {
             const $eventLocationValue = document.getElementById("eventLocation").value;
             const $eventDateValue = document.getElementById("eventDate").value;
             var myJSON = JSON.stringify($eventDateValue);
-            console.log($eventTitleValue,$eventDescriptionValue,$eventLocationValue, $eventDateValue)
+
             const event = {
                 eventName: $eventTitleValue,
                 description: $eventDescriptionValue,
                 date: myJSON,
-                location:$eventLocationValue
+                location: $eventLocationValue
             }
             databaseMethod.postEvent(event)
         }

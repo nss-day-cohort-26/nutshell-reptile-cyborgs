@@ -16,7 +16,7 @@ const eventForm = Object.create({}, {
             const $eventDescriptionInput = $("<input>").attr("id", "eventDescription").appendTo($eventDescriptionLabel)
 
             const $eventLocationLabel = $("<label>").attr("for", "eventLocation").text("Event Location").appendTo($paraEvent)
-            const $eventLoactionInput = $("<input>").attr("id", "eventLocation").appendTo($eventLocationLabel)
+            const $eventLocationInput = $("<input>").attr("id", "eventLocation").appendTo($eventLocationLabel)
 
             const $eventDateLabel = $("<label>").attr("for", "eventDate").text("Event Date").appendTo($paraEvent)
             const $eventContentInput = $("<input>").attr("type", "date").attr("id", "eventDate").appendTo($eventDateLabel)

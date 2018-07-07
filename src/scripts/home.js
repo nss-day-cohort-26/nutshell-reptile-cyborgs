@@ -7,10 +7,10 @@ const databaseMethod = require("./databaseMethods")
 
 //User Header and search bar&button//
 const userHome = Object.create({}, {
-    buildUserHome: {
-        value: () => {
+  buildUserHome: {
+    value: () => {
 
-            navBar.innerHTML = `
+      navBar.innerHTML = `
 <a class="navbar-brand" href="#">Reptile Cyborgs</a>
 
 <div id="navbarNav">
@@ -36,25 +36,25 @@ const userHome = Object.create({}, {
     </ul>
   </div>
   `
-            console.log("inside buildUserHome")
 
-            const divRef = document.querySelector(".div--container");
 
-            const $userContainerDiv = $("<div>").attr("id", "userHeaderContainer");
+      const divRef = document.querySelector(".div--container");
 
-            const $userNameTitle = $("<h1>").attr("id", "userNameTitle").text({}).appendTo($userContainerDiv);
+      const $userContainerDiv = $("<div>").attr("id", "userHeaderContainer");
 
-            const $labelSearchBar = $("<label>").text("Search:");
-            const $searchInput = $("<input>").attr("id", "searchInput").attr("placeholder", "Search").appendTo($labelSearchBar);
-            $labelSearchBar.appendTo($userContainerDiv);
+      const $userNameTitle = $("<h1>").attr("id", "userNameTitle").text({}).appendTo($userContainerDiv);
 
-            const $searchButton = $("<button>").attr("type", "button").text("Search").attr("id", "searchButton").appendTo($userContainerDiv);
+      const $labelSearchBar = $("<label>").text("Search:");
+      const $searchInput = $("<input>").attr("id", "searchInput").attr("placeholder", "Search").appendTo($labelSearchBar);
+      $labelSearchBar.appendTo($userContainerDiv);
 
-            const $contentContainerDiv = $("<div>").attr("id", "contentContainerDiv").appendTo($userContainerDiv);
+      const $searchButton = $("<button>").attr("type", "button").text("Search").attr("id", "searchButton").appendTo($userContainerDiv);
 
-            const $userContentSection = $("<section>").attr("id", "userContentSection").appendTo($userContainerDiv)
-            $userContainerDiv.appendTo(divRef)
-        }
+      const $contentContainerDiv = $("<div>").attr("id", "contentContainerDiv").appendTo($userContainerDiv);
+
+      const $userContentSection = $("<section>").attr("id", "userContentSection").appendTo($userContainerDiv)
+      $userContainerDiv.appendTo(divRef)
     }
+  }
 })
 module.exports = userHome;
