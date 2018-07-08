@@ -12,7 +12,7 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
-
+const addTask = require("./addtask")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -50,8 +50,7 @@ body.addEventListener("click", () => {
         clear()
         articles.articleDOM();
         allArticlesDOM.projectArticle();
-    }
-    else if (event.target.id === "addArticle") {
+    } else if (event.target.id === "addArticle") {
         clear()
         addArticle.addArticle();
     }
@@ -64,16 +63,16 @@ body.addEventListener("click", () => {
         clear();
         articles.articleDOM();
         allArticlesDOM.projectArticle()
-    }
-    else if (event.target.id === "articleDel") {
+    } else if (event.target.id === "articleDel") {
         const id = $(event.target).parent().attr("id");
         databaseMethod.deleteArticles(id).then(() => {
             clear();
             articles.articleDOM();
             allArticlesDOM.projectArticle()
         })
-    }
-    else if (event.target.id === "tasks") {
+    } else if (event.target.id === "tasks") {
         addTask.addTask();
+        clear();
+        addTaskToDom.projectTask()
     }
 })

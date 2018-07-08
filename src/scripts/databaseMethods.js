@@ -1,4 +1,4 @@
-// Authors: Emily and Shu , database methods for whole project
+// Authors: Emily and Shu, Michael , database methods for whole project
 
 const $ = require("jquery");
 
