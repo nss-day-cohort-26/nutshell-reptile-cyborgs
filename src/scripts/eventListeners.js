@@ -13,7 +13,7 @@ const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
 const addTask = require("./addTask")
-const addTaskToDom = require("./addTaskToDom")
+const addTaskToDom = require("./allTasksDOM")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");

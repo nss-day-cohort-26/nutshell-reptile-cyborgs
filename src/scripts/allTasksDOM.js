@@ -2,7 +2,7 @@ const $ = require("jquery")
 const databaseMethods = require("./databaseMethods")
 
 const addTaskToDom = Object.create({}, {
-    addTaskToDom: {
+    projectTask: {
         value: () => {
 
             databaseMethods.getAllTasks().then((responseTask) =>
