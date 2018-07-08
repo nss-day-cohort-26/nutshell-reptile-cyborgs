@@ -66,6 +66,11 @@
 .userArticle {
     border: 2px solid white;
 }
+.userEvents:first-child { 
+    background-color: yellow;
+    color:blue;
+    font-size:1.5rem;
+}
 
 
 /* nav {
