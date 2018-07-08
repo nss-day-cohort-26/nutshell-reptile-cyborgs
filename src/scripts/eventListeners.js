@@ -12,7 +12,8 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
-const addTask = require("./addtask")
+const addTask = require("./addTask")
+const addTaskToDom = require("./addTaskToDom")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -71,8 +72,8 @@ body.addEventListener("click", () => {
             allArticlesDOM.projectArticle()
         })
     } else if (event.target.id === "tasks") {
-        addTask.addTask();
         clear();
-        addTaskToDom.projectTask()
+        addTask.addTask();
+        addTaskToDom.addTaskToDom();
     }
 })
