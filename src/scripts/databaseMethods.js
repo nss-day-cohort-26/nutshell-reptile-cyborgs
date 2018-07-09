@@ -1,4 +1,4 @@
-// Authors: Emily and Shu , database methods for whole project
+// Authors: Emily and Shu, Michael , database methods for whole project
 
 const $ = require("jquery");
 
@@ -74,7 +74,6 @@ const databaseMethods = Object.create({}, {
             })
         }
     },
-
     //--- <a class="nav-link" href="#">Friends List<span class="sr-only">(current)</span></a>---FIX CLASS IF NECESSARY---//
     postFriend: {
         value: (friend) => {
@@ -102,16 +101,41 @@ const databaseMethods = Object.create({}, {
         value: (id) => {
             return $.ajax({
                 url: `http://localhost:3000/friends/${id}`,
+            })
+        }
+    },
+    // Methods for events
+    postEvent: {
+        value: (event) => {
+            return $.ajax({
+                url: "http://localhost:3000/events",
+                method: "POST",
+                data: event
+            })
+
+        }
+    },
+    deleteEvent: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/events/${id}`,
                 method: "DELETE"
             })
         }
     },
-
-    getData: {
-        value: (resource) => {
-            return $.ajax(`http://localhost:3000/${resource}`)
+    getAllEvents: {
+        value: () => {
+            return $.ajax("http://localhost:3000/events")
         }
-    }
+    },
+    putEvents: {
+        value: (id) => {
+            $.ajax({
+                url: `http://localhost:3000/events/${id}`,
+                method: "PUT"
+            })
+        }
+    } //End of Event Methods
 })
 
 module.exports = databaseMethods;
