@@ -55,12 +55,10 @@
 
 
 }
-
-/* #regTitle {
+#regTitle {
     font-size: 5rem;
     text-shadow: 2px 2px 2px black;
 }
-
 #regFormContainer {
     background-color: rgba(213, 216, 241, 0.815);
     box-align: center;
@@ -68,26 +66,15 @@
     border-width: 5em;
     border-radius: .3em;
 }
-
 .userArticle {
     border: 2px solid white;
 }
-
 .userEvents:first-child {
     background-color: yellow;
     color: blue;
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 .userEvents {
     padding: 10px;
-}
-
-#taskIdPlaceholder {
-    height: 20vh
-}  */
-
-/* nav {
-    background-color: white;
 }
