@@ -1,4 +1,6 @@
 const $ = require("jquery")
+
+//Taking users input and posting to the databaseMethod
 const databaseMethod = require("./databaseMethods")
 
 const subArticle = Object.create({}, {
