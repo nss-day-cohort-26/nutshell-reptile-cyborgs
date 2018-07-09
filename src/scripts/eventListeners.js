@@ -74,13 +74,23 @@ body.addEventListener("click", () => {
             allArticlesDOM.projectArticle()
         })
     } else if (event.target.id === "tasks") {
-
         clear();
-
         addTask.addTask();
         addTaskToDom.projectTask();
-    } else if (event.target.id === "taskDel") {
-        clear()
+
+
+    } else if (event.target.id === "taskSubmit") {
+        console.log("Button Clicked");
+        console.log($("#taskTitle").val());
+        console.log($("#taskCompleteDate").val());
+        const newTask = {
+            taskName: $("#taskTitle").val(),
+            taskCompDate: $("#taskCompleteDate").val()
+        }
+        databaseMethod.postTask(newTask).then(() => {
+            addTaskToDom.projectTask();
+
+        });
 
     }
     // Start of events eventListeners
