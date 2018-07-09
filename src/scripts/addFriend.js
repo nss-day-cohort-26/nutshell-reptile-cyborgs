@@ -4,7 +4,7 @@
 const $ = require("jquery")
 const databaseMethod = require("./databaseMethods")
 
-const addArticle = Object.create({}, {
+const addFriend = Object.create({}, {
         addArticle: {
             value: () => {
                 const divRef = document.querySelector(".div--container");

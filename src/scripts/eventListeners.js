@@ -18,7 +18,7 @@ const addTaskToDom = require("./allTasksDOM")
 
 const eventForm = require("./eventForm")
 const subEvent = require("./subEvent")
-const allEventsDOM = require("./allEventsDOM")
+const addFriendBuildList = require("./searchAddFriendList")
 
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
@@ -100,6 +100,14 @@ body.addEventListener("click", () => {
             eventForm.eventForm()
             allEventsDOM.projectEvents();
         })
+
+    } else if (event.target.id === "friends") {
+    clear();
+    addFriendBuildList.createFriendsList();
+    addFriendBuildList.displayFriends();
+
+    } else if (event.target.id === "deleteFriend") {
+    clear()
     }
-    //end of event eventListeners
 })
+    //end of event eventListeners

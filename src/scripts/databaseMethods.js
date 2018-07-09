@@ -104,6 +104,11 @@ const databaseMethods = Object.create({}, {
             })
         }
     },
+    getData: {
+        value: (resource) => {
+            return $.ajax(`http://localhost:3000/${resource}`)
+        }
+    },
     // Methods for events
     postEvent: {
         value: (event) => {
