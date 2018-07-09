@@ -11,7 +11,7 @@ const addArticleToDOM = Object.create({}, {
             databaseMethods.getAllArticles().then((responseArticle) =>
                 responseArticle.forEach(element => {
                     const $artRef = $("<article>").addClass("userArticle").attr("id", `${element.id}`)
-                    console.log("element", element)
+
                     const $pArticleTitle = $("<p>").text(`${element.title}`).appendTo($artRef)
                     const $pArticleContent = $("<p>").text(`${element.content}`).appendTo($pArticleTitle)
                     const $pUrl = $("<p>").text(`${element.url}`).appendTo($pArticleContent)

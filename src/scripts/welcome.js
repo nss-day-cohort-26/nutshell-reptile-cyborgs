@@ -10,11 +10,11 @@ const buildWelcomeObject = Object.create({}, {
 
             // Selects the main div class .div--container on the index
             const divRef = document.querySelector(".div--container");
-            console.log("welcome")
-                //created a div and gave it the class of div-welcome
+
+            //created a div and gave it the class of div-welcome
             const $divWelcome = $("<div>").addClass("div-welcome");
             const $paraRef = $("<p>")
-                //Created elements with ID's
+            //Created elements with ID's
             const $h1Welcome = $("<h1>").text("Welcome");
             $h1Welcome.attr("id", "h1Welcome");
             const $loginButton = $("<button>").text("Login");
