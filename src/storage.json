@@ -1,4 +1,4 @@
-  {
+{
   "users": [
     {
       "name": "Test_Name",
@@ -143,7 +143,6 @@
       "date": "\"2018-07-07\"",
       "location": "nss",
       "id": 6
-
     }
   ],
   "friends": [
@@ -154,9 +153,29 @@
   ],
   "messages": [
     {
-      "message-content": "Test_Message",
-      "friendID": "",
-      "userID": "0"
+      "messageContent": "test",
+      "userID": "0",
+      "id": 1
+    },
+    {
+      "messageContent": "test2",
+      "userID": "0",
+      "id": 2
+    },
+    {
+      "messageContent": "",
+      "userID": "0",
+      "id": 3
+    },
+    {
+      "messageContent": "test",
+      "userID": "0",
+      "id": 4
+    },
+    {
+      "messageContent": "yes",
+      "userID": "0",
+      "id": 5
     }
   ],
   "tasks": [

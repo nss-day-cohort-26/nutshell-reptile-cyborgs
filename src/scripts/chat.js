@@ -7,8 +7,12 @@ const chat = Object.create({}, {
         value: () => {
             console.log("inside chat.js")
             userHome.buildUserHome();
-            const secRef = document.querySelector("#userContentSection");
+            const secRef = document.querySelector("#chatButton");
             const addArticleButton = $("<button>").attr("id", "addChat").appendTo(secRef).text("Chat")
+            $("#searchInput").attr("placeholder", "chat");
+            $("#labelSearchBar").text("Chat:");
+            $("#searchButton").attr("id","chatButton")
+            $("#searchInput").attr("id","chatInput")
 
 
         }
