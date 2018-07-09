@@ -20,3 +20,5 @@ const allFriendsDOM = Object.create({}, {
         }
     }
 })
+
+module.exports = allFriendsDOM

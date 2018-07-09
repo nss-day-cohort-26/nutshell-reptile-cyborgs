@@ -92,7 +92,7 @@ const databaseMethods = Object.create({}, {
         }
     },
 
-    getAnArticle: {
+    getAFriend: {
         value: (id) => {
             return $.ajax(`http://localhost:3000/friends/${id}`)
         }
