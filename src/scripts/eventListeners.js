@@ -19,8 +19,9 @@ const addTaskToDom = require("./allTasksDOM")
 
 const eventForm = require("./eventForm")
 const subEvent = require("./subEvent")
+const subEditEvents = require("./subEditEvent")
 const allEventsDOM = require("./allEventsDOM")
-
+const editEventForm = require("./editEventForm")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -101,7 +102,19 @@ body.addEventListener("click", () => {
             eventForm.eventForm()
             allEventsDOM.projectEvents();
         })
+    } else if (event.target.id === "eventPut") {
+        const id = $(event.target).parent().attr("id");
+        module.exports = id;
+        clear()
+        editEventForm.editEventForm()
+
+    } else if (event.target.id === "eventPutSubmit") {
+        subEditEvents.subEditEvents();
+        clear();
+        eventForm.eventForm()
+        allEventsDOM.projectEvents();
     }
+    /*---End of Event event listeners --*/
     else if (event.target.id === "chat") {
         clear();
         chat.chat();
