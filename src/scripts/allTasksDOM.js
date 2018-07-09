@@ -9,17 +9,19 @@ const addTaskToDom = Object.create({}, {
 
             databaseMethods.getAllTasks().then((responseTask) =>
                 responseTask.forEach(element => {
-                    const $taskRef = $("<article>").addClass("userArticle").attr("id", `${element.id}`)
+                    const $taskRef = $("<article>").addClass("taskArticle").attr("id", `${element.id}`)
                     console.log("element", element)
-                    const $pTaskTitle = $("<p>").text(`${element.title}`).appendTo($taskRef)
-                    const $pTaskContent = $("<p>").text(`${element.content}`).appendTo($pTaskTitle)
-                    const $pUrl = $("<p>").text(`${element.url}`).appendTo($pTaskContent)
-                    const $deleteButton = $("<button>").appendTo($taskRef).text("Delete").attr("id", "taskDel")
-                    const $secRef = document.getElementById("userContentSection")
-                    $taskRef.appendTo($secRef)
-                })
-            )
+                    const $taskSection = $("<section>").addClass("taskSection");
+                    const $pTaskTitle = $("<p>").text(`${element.taskName}`).appendTo($taskSection)
+                    const $pTaskCompDate = $("<p>").text(`${element.taskCompDate}`).appendTo($taskSection)
+                        //const $pId = $("<p>").text(`${element.Id}`).appendTo($taskSection)
+                    const $deleteButton = $("<button>").appendTo($taskSection).text("Delete").attr("id", "taskDel")
+                    const $divRef = $(".div--container");
+                    $taskSection.appendTo($taskRef);
+                    $taskRef.appendTo($divRef)
+                }))
         }
     }
 })
+
 module.exports = addTaskToDom;

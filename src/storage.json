@@ -1,3 +1,4 @@
+
 {
   "users": [
     {
@@ -124,10 +125,10 @@
       "id": 1
     },
     {
-      "eventName": "party",
-      "description": "party",
-      "date": "\"2018-07-13\"",
-      "location": "bar",
+      "eventName": "party ",
+      "description": "party hard",
+      "date": "\"07-13-2018\"",
+      "location": "bar one",
       "id": 3
     },
     {
@@ -147,8 +148,8 @@
   ],
   "friends": [
     {
-      "userID": "0",
-      "friendID": "1"
+      "userID": "1",
+      "currentUserID": "0"
     }
   ],
   "messages": [
@@ -180,10 +181,24 @@
   ],
   "tasks": [
     {
-      "id": 0,
       "taskName": "",
-      "completionDate": "",
-      "userId": 0
+      "taskCompDate": "",
+      "id": 1
+    },
+    {
+      "taskName": "test",
+      "taskCompDate": "test",
+      "id": 2
+    },
+    {
+      "taskName": "apple",
+      "taskCompDate": "apple",
+      "id": 3
+    },
+    {
+      "taskName": "apple",
+      "taskCompDate": "apple",
+      "id": 4
     }
   ]
 }

@@ -12,6 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    
 }
 
 #h1Welcome {
@@ -30,7 +31,6 @@
     background-color: #7a7a7a;
 }
 
-
 /* CSS For the New User Registration Form */
 
 .div--container {
@@ -41,12 +41,12 @@
     background-color: #0582ef;
     border: 2px solid black;
     color: whitesmoke;
-    /* position: absolute; */
     margin: auto;
-    /* top: 0;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 0; */
+    bottom: 0;
+    flex-direction:column;
 }
 
 #regTitle {
@@ -62,20 +62,19 @@
     border-radius: .3em;
 }
 
-
 .userArticle {
     border: 2px solid white;
 }
-.userEvents:first-child { 
+
+.userEvents:first-child {
     background-color: yellow;
-    color:blue;
-    font-size:1.5rem;
+    color: blue;
+    font-size: 1.5rem;
     font-weight: bold;
 }
-.userEvents{
-    padding:10px;
+.taskArticle{
+    border:2px solid white;
 }
-
-/* nav {
-    background-color: white;
-} */
+.userEvents {
+    padding: 10px;
+}
