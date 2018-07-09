@@ -1,4 +1,6 @@
+
 {
+
   "users": [
     {
       "name": "Test_Name",
@@ -147,8 +149,8 @@
   ],
   "friends": [
     {
-      "userID": "0",
-      "friendID": "1"
+      "userID": "1",//friend//
+      "currentUserID": "0"
     }
   ],
   "messages": [

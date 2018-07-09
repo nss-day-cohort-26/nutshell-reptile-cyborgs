@@ -19,9 +19,13 @@ const addTaskToDom = require("./allTasksDOM")
 
 const eventForm = require("./eventForm")
 const subEvent = require("./subEvent")
+
+const addFriendBuildList = require("./searchAddFriendList")
+
 const subEditEvents = require("./subEditEvent")
 const allEventsDOM = require("./allEventsDOM")
 const editEventForm = require("./editEventForm")
+
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -102,6 +106,18 @@ body.addEventListener("click", () => {
             eventForm.eventForm()
             allEventsDOM.projectEvents();
         })
+
+
+    } else if (event.target.id === "friends") {
+    clear();
+    addFriendBuildList.createFriendsList();
+    addFriendBuildList.displayFriends();
+
+    } else if (event.target.id === "deleteFriend") {
+    clear()
+    }
+    //end of event eventListeners
+
     } else if (event.target.id === "eventPut") {
         const id = $(event.target).parent().attr("id");
         module.exports = id;
@@ -120,3 +136,4 @@ body.addEventListener("click", () => {
         chat.chat();
     }
 })
+
