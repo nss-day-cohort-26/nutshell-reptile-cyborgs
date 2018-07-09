@@ -55,7 +55,7 @@ const databaseMethods = Object.create({}, {
             return $.ajax({
                 url: "http://localhost:3000/tasks/",
                 method: "POST",
-                data: tasks
+                data: task
             })
         }
     },

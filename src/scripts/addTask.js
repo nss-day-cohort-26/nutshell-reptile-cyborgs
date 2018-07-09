@@ -15,10 +15,11 @@ const addTask = Object.create({}, {
                 const $taskTitleInput = $("<input>").attr("id", "taskTitle").appendTo($taskTitleLabel)
                 const $taskCompleteDateLabel = $("<label>").attr("for", "taskCompleteDate").text("Task Complete Date").appendTo($paraTask)
                 const $taskCompleteDateInput = $("<input>").attr("id", "taskCompleteDate").appendTo($taskCompleteDateLabel)
-                const $taskCompletion = $("<label>").attr("for", "taskToComplete").text("Completion Date").appendTo($divTask)
+                const $taskCompletion = $("<label>").attr("for", "taskToComplete").text("Completed").appendTo($divTask)
+                const $taskContentInput = $(":checkbox").attr("id", "taskToComplete").appendTo($taskCompletion)
                 const $taskAddSubmit = $("<button>").attr("id", "taskSubmit").text("Add Task").appendTo($divTask)
 
-                //  const $taskContentInput = $(":checkbox").attr("id", "taskToComplete").appendTo($taskCompletion)
+
 
             }
 
