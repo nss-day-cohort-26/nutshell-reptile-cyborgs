@@ -1,3 +1,5 @@
+//authors:Michael, Shu
+//purpose: This module adds articles to the dom
 const $ = require("jquery")
 const databaseMethods = require("./databaseMethods")
 
@@ -12,9 +14,9 @@ const addTaskToDom = Object.create({}, {
                     const $pTaskTitle = $("<p>").text(`${element.title}`).appendTo($taskRef)
                     const $pTaskContent = $("<p>").text(`${element.content}`).appendTo($pTaskTitle)
                     const $pUrl = $("<p>").text(`${element.url}`).appendTo($pTaskContent)
-                    const $deleteButton = $("<button>").appendTo($artRef).text("Delete").attr("id", "articleDel")
+                    const $deleteButton = $("<button>").appendTo($taskRef).text("Delete").attr("id", "taskDel")
                     const $secRef = document.getElementById("userContentSection")
-                    $artRef.appendTo($secRef)
+                    $taskRef.appendTo($secRef)
                 })
             )
         }

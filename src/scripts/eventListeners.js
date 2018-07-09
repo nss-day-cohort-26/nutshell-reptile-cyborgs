@@ -74,6 +74,9 @@ body.addEventListener("click", () => {
     } else if (event.target.id === "tasks") {
         clear();
         addTask.addTask();
-        addTaskToDom.addTaskToDom();
+        addTaskToDom.projectTask();
+    } else if (event.target.id === "taskDel") {
+        clear()
+
     }
 })

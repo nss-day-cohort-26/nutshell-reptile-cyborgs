@@ -15,7 +15,7 @@ const addArticleToDOM = Object.create({}, {
                     const $pArticleTitle = $("<p>").text(`${element.title}`).appendTo($artRef)
                     const $pArticleContent = $("<p>").text(`${element.content}`).appendTo($pArticleTitle)
                     const $pUrl = $("<p>").text(`${element.url}`).appendTo($pArticleContent)
-                    const $deleteButton = $("<button>").appendTo($artRef).text("Delete").attr("id","articleDel")
+                    const $deleteButton = $("<button>").appendTo($artRef).text("Delete").attr("id", "articleDel")
                     const $secRef = document.getElementById("userContentSection")
                     $artRef.appendTo($secRef)
                 })
