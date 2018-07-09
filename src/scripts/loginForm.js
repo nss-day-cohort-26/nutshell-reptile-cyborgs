@@ -30,7 +30,7 @@ const loginForm = Object.create({}, {
 
             //created a div and gave it the class of div-welcome
             $formDiv.appendTo(divRef);
-            console.log(divRef);
+
         }
     }
 })

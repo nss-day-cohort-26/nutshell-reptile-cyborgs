@@ -12,7 +12,9 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
-
+const eventForm = require("./eventForm")
+const subEvent = require("./subEvent")
+const allEventsDOM = require("./allEventsDOM")
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
 const body = document.querySelector("body");
@@ -31,7 +33,7 @@ body.addEventListener("click", () => {
         let isDuplicate = false;
         databaseMethod.getAllUsers().then((response) => {
             response.forEach(element => {
-                console.log("element", element)
+
                 if (name.toUpperCase() === element.name.toUpperCase()) {
                     isDuplicate = true;
                     clear()
@@ -50,30 +52,42 @@ body.addEventListener("click", () => {
         clear()
         articles.articleDOM();
         allArticlesDOM.projectArticle();
-    }
-    else if (event.target.id === "addArticle") {
+    } else if (event.target.id === "addArticle") {
         clear()
         addArticle.addArticle();
-    }
-    // else if (event.target.id === "deleteArticle") {
-    //   //call to delete
-    // }
-    else if (event.target.id === "articleSubmit") {
-        console.log("article submit was pressed")
+    } else if (event.target.id === "articleSubmit") {
+
         subArticle.subArticle();
         clear();
         articles.articleDOM();
         allArticlesDOM.projectArticle()
-    }
-    else if (event.target.id === "articleDel") {
+    } else if (event.target.id === "articleDel") {
         const id = $(event.target).parent().attr("id");
         databaseMethod.deleteArticles(id).then(() => {
             clear();
             articles.articleDOM();
             allArticlesDOM.projectArticle()
         })
-    }
-    else if (event.target.id === "tasks") {
+    } else if (event.target.id === "tasks") {
         addTask.addTask();
     }
+    // Start of events eventListeners
+    else if (event.target.id === "events") {
+        clear();
+        eventForm.eventForm()
+        allEventsDOM.projectEvents();
+    } else if (event.target.id === "eventSubmit") {
+        subEvent.subEvent()
+        clear();
+        eventForm.eventForm()
+        allEventsDOM.projectEvents();
+    } else if (event.target.id === "eventDelete") {
+        const id = $(event.target).parent().attr("id");
+        databaseMethod.deleteEvent(id).then(() => {
+            clear();
+            eventForm.eventForm()
+            allEventsDOM.projectEvents();
+        })
+    }
+    //end of event eventListeners
 })

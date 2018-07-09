@@ -53,7 +53,7 @@ const databaseMethods = Object.create({}, {
     },
 
     postTask: {
-        valule: (task) => {
+        value: (task) => {
             return $.ajax({
                 url: "http://localhost:3000/tasks/",
                 method: "POST",
@@ -76,7 +76,40 @@ const databaseMethods = Object.create({}, {
                 method: "PUT"
             })
         }
-    }
+    },
+    // Methods for events
+    postEvent: {
+        value: (event) => {
+            return $.ajax({
+                url: "http://localhost:3000/events",
+                method: "POST",
+                data: event
+            })
+
+        }
+    },
+    deleteEvent: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/events/${id}`,
+                method: "DELETE"
+            })
+        }
+    },
+    getAllEvents: {
+        value: () => {
+            return $.ajax("http://localhost:3000/events")
+        }
+    },
+    putEvents: {
+        value: (id) => {
+            $.ajax({
+                url: `http://localhost:3000/events/${id}`,
+                method: "PUT"
+            })
+        }
+    } //End of Event Methods
+
 })
 
 module.exports = databaseMethods;
