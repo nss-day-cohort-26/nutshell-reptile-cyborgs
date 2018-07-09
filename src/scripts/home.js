@@ -51,6 +51,7 @@ const userHome = Object.create({}, {
 
       const $userContentSection = $("<section>").attr("id", "userContentSection").appendTo($userContainerDiv)
       $userContainerDiv.appendTo(divRef)
+
     }
   }
 })

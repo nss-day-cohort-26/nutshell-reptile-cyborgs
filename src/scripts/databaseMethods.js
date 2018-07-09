@@ -146,7 +146,24 @@ const databaseMethods = Object.create({}, {
                 data:event
             })
         }
-    } //End of Event Methods
+    } ,
+    postChat: {
+        value: (chatObject) => {
+            console.log(chatObject)
+            return $.ajax({
+                url: "http://localhost:3000/messages",
+                method: "POST",
+                data: chatObject
+            })
+
+        }
+    },
+    getChat: {
+        value: () => {
+            return $.ajax("http://localhost:3000/messages")
+        }
+    },
+    //End of Event Methods
 })
 
 module.exports = databaseMethods;

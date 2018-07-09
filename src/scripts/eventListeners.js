@@ -12,7 +12,7 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
-const chatDOM = require("./chat")
+const chat = require("./chat")
 
 const addTask = require("./addTask")
 const addTaskToDom = require("./allTasksDOM")
@@ -141,5 +141,19 @@ body.addEventListener("click", () => {
     else if (event.target.id === "chat") {
         clear();
         chat.chat();
+    }
+    else if (event.target.id === "chatButton") {
+        console.log("I have clicked the chat button")
+       const chatInput = $("#chatInput").val();
+       console.log(chatInput)
+       const messageChat = {
+            messageContent: chatInput,
+            userID: "0"
+            }
+            console.log(messageChat)
+            databaseMethod.postChat(messageChat).then(function (){
+                for (let i = 0; i < messageChat.length; i++) {
+                }
+            })
     }
 })
