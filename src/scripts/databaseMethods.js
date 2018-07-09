@@ -18,6 +18,11 @@ const databaseMethods = Object.create({}, {
             return $.ajax("http://localhost:3000/users")
         }
     },
+    searchUsers: {
+        value: (name) => {
+            return $.ajax(`http://localhost:3000/news/${name}`)
+        }
+    },
 
     addArticles: {
         value: (articles) => {
