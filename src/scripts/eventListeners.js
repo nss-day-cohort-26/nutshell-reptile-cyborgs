@@ -119,15 +119,12 @@ body.addEventListener("click", () => {
 
 
     } else if (event.target.id === "friends") {
-    clear();
-    addFriendBuildList.createFriendsList();
-    addFriendBuildList.displayFriends();
+        clear();
+        addFriendBuildList.createFriendsList();
+        addFriendBuildList.displayFriends();
 
     } else if (event.target.id === "deleteFriend") {
-    clear()
-    }
-    //end of event eventListeners
-
+        clear()
     } else if (event.target.id === "eventPut") {
         const id = $(event.target).parent().attr("id");
         module.exports = id;
@@ -146,4 +143,3 @@ body.addEventListener("click", () => {
         chat.chat();
     }
 })
-
