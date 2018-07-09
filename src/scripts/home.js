@@ -28,7 +28,7 @@ const userHome = Object.create({}, {
         <a class="nav-link" href="#">Friends Tasks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Chat</a>
+        <a class="nav-link" id="chat">Chat</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Events</a>
@@ -53,8 +53,12 @@ const userHome = Object.create({}, {
             const $contentContainerDiv = $("<div>").attr("id", "contentContainerDiv").appendTo($userContainerDiv);
 
             const $userContentSection = $("<section>").attr("id", "userContentSection").appendTo($userContainerDiv)
-            $userContainerDiv.appendTo(divRef)
+            $userContainerDiv.appendTo(divRef);
+
+            // const $userChat = $("<section>").attr("id", "userChat").appendTo($userContainerDiv)
+            // $userContainerDiv.appendTo(divRef)
         }
+
     }
 })
 module.exports = userHome;

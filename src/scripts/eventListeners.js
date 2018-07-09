@@ -12,6 +12,7 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
+const chatDOM = require("./chat")
 
 
 //if register button is clicked, take to register page. If login button is clicked, take to login page
@@ -75,5 +76,9 @@ body.addEventListener("click", () => {
     }
     else if (event.target.id === "tasks") {
         addTask.addTask();
+    }
+    else if (event.target.id === "chat") {
+        clear();
+        chat.chat();
     }
 })
