@@ -1,7 +1,6 @@
-// Authors: Emily and Shu , database methods for whole project
+// Authors: Emily and Shu, Michael , database methods for whole project
 
 const $ = require("jquery");
-
 
 const databaseMethods = Object.create({}, {
     postUser: {
@@ -10,7 +9,6 @@ const databaseMethods = Object.create({}, {
                 url: "http://localhost:3000/users",
                 method: "POST",
                 data: user
-
             })
         }
     },
@@ -27,7 +25,6 @@ const databaseMethods = Object.create({}, {
                 url: "http://localhost:3000/news",
                 method: "POST",
                 data: articles
-
             })
         }
     },
@@ -37,6 +34,7 @@ const databaseMethods = Object.create({}, {
             return $.ajax("http://localhost:3000/news")
         }
     },
+
     getAnArticle: {
         value: (id) => {
             return $.ajax(`http://localhost:3000/news/${id}`)
@@ -53,22 +51,21 @@ const databaseMethods = Object.create({}, {
     },
 
     postTask: {
-        valule: (task) => {
+        value: (task) => {
             return $.ajax({
                 url: "http://localhost:3000/tasks/",
                 method: "POST",
                 data: tasks
             })
-
         }
-
-
     },
+
     getAllTasks: {
         value: () => {
             return $.ajax("http://localhost:3000/tasks")
         }
     },
+
     putTask: {
         value: (id) => {
             $.ajax({
@@ -76,7 +73,69 @@ const databaseMethods = Object.create({}, {
                 method: "PUT"
             })
         }
-    }
+    },
+    //--- <a class="nav-link" href="#">Friends List<span class="sr-only">(current)</span></a>---FIX CLASS IF NECESSARY---//
+    postFriend: {
+        value: (friend) => {
+            return $.ajax({
+                url: "http://localhost:3000/friends",
+                method: "POST",
+                data: friend
+            })
+        }
+    },
+
+    getAllFriends: {
+        value: () => {
+            return $.ajax("http://localhost:3000/friends")
+        }
+    },
+
+    getAFriend: {
+        value: (id) => {
+            return $.ajax(`http://localhost:3000/friends/${id}`)
+        }
+    },
+
+    deleteFriends: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/friends/${id}`,
+            })
+        }
+    },
+    // Methods for events
+    postEvent: {
+        value: (event) => {
+            return $.ajax({
+                url: "http://localhost:3000/events",
+                method: "POST",
+                data: event
+            })
+
+        }
+    },
+    deleteEvent: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/events/${id}`,
+                method: "DELETE"
+            })
+        }
+    },
+    getAllEvents: {
+        value: () => {
+            return $.ajax("http://localhost:3000/events")
+        }
+    },
+    putEvents: {
+        value: (id) => {
+            $.ajax({
+                url: `http://localhost:3000/events/${id}`,
+                method: "PUT"
+            })
+        }
+    } //End of Event Methods
 })
 
 module.exports = databaseMethods;
