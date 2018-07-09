@@ -12,6 +12,7 @@ const articles = require("./articles")
 const addArticle = require("./addArticle")
 const allArticlesDOM = require("./allArticlesDOM")
 const subArticle = require("./subArticle")
+const chatDOM = require("./chat")
 
 const addTask = require("./addTask")
 const addTaskToDom = require("./allTasksDOM")
@@ -101,5 +102,8 @@ body.addEventListener("click", () => {
             allEventsDOM.projectEvents();
         })
     }
-    //end of event eventListeners
+    else if (event.target.id === "chat") {
+        clear();
+        chat.chat();
+    }
 })
