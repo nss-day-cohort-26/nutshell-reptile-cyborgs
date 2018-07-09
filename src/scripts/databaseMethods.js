@@ -87,8 +87,14 @@ const databaseMethods = Object.create({}, {
             })
 
         }
-
-
+    },
+    deleteEvent: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/events/${id}`,
+                method: "DELETE"
+            })
+        }
     },
     getAllEvents: {
         value: () => {

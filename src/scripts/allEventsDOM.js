@@ -11,7 +11,6 @@ const allEventsDOM = Object.create({}, {
                 const sortedArray = responseEvents.sort(function (a, b) {
                     a = new Date(a.date); //new creates new object and fills it with a.date properties
                     b = new Date(b.date);
-                    console.log("a and b", a, b)
                     return b > a ? -1 : b < a ? 1 : 0; //else if
                 });
                 console.log("sortedArray", sortedArray)
@@ -21,14 +20,11 @@ const allEventsDOM = Object.create({}, {
                     const $artRef = $("<article>").addClass("userEvents").attr("id", `${element.id}`)
                     console.log("element", element)
                     const $pEventName = $("<p>").text(`${element.eventName}`).appendTo($artRef)
-                    //                 "eventName": "me",
-                    //   "description": "me",
-                    //   "date": "\"2019-03-10\"",
-                    //   "location": "me",
                     const $pEventDescription = $("<p>").text(`${element.description}`).appendTo($pEventName)
                     const $pEventLocation = $("<p>").text(`${element.location}`).appendTo($pEventDescription)
                     const $pEventDate = $("<p>").text(`${element.date}`).appendTo($pEventLocation)
-                    const $deleteButton = $("<button>").appendTo($artRef).text("Delete").attr("id", "EventDelete")
+                    const $deleteButton = $("<button>").appendTo($artRef).text("Delete").attr("id", "eventDelete")
+                    const $putButton = $("<button>").appendTo($artRef).text("Update").attr("id", "eventPut")
                     $artRef.appendTo($secRef)
                 })
             })

@@ -74,13 +74,20 @@ body.addEventListener("click", () => {
     // Start of events eventListeners
     else if (event.target.id === "events") {
         clear();
-        //call to event form builder
-        allEventsDOM.projectEvents();
         eventForm.eventForm()
+        allEventsDOM.projectEvents();
     } else if (event.target.id === "eventSubmit") {
         subEvent.subEvent()
         clear();
+        eventForm.eventForm()
         allEventsDOM.projectEvents();
+    } else if (event.target.id === "eventDelete") {
+        const id = $(event.target).parent().attr("id");
+        databaseMethod.deleteEvent(id).then(() => {
+            clear();
+            eventForm.eventForm()
+            allEventsDOM.projectEvents();
+        })
     }
     //end of event eventListeners
 })
