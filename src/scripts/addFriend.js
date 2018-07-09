@@ -5,7 +5,9 @@ const $ = require("jquery")
 const databaseMethod = require("./databaseMethods")
 
 const addFriend = Object.create({}, {
-        addArticle: {
+
+        addFriend: {
+
             value: () => {
                 const divRef = document.querySelector(".div--container");
                 const $divFriend = $("<div>").attr("id", "friendIdPlaceholder").text("Article").appendTo(divRef)

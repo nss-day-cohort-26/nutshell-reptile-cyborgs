@@ -25,6 +25,6 @@ const eventForm = Object.create({}, {
 
         }
 
-    } //end of addArticle Method
+    } //end of eventForm Method
 }) //end of object
 module.exports = eventForm;

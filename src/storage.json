@@ -1,4 +1,6 @@
-{  
+
+{
+
   "users": [
     {
       "name": "Test_Name",
@@ -124,10 +126,10 @@
       "id": 1
     },
     {
-      "eventName": "party",
-      "description": "party",
-      "date": "\"2018-07-13\"",
-      "location": "bar",
+      "eventName": "party ",
+      "description": "party hard",
+      "date": "\"07-13-2018\"",
+      "location": "bar one",
       "id": 3
     },
     {
@@ -143,7 +145,6 @@
       "date": "\"2018-07-07\"",
       "location": "nss",
       "id": 6
-
     }
   ],
   "friends": [

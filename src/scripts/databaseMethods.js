@@ -133,11 +133,17 @@ const databaseMethods = Object.create({}, {
             return $.ajax("http://localhost:3000/events")
         }
     },
-    putEvents: {
+    getOneEvent: {
         value: (id) => {
+            return $.ajax(`http://localhost:3000/events/${id}`)
+        }
+    },
+    putEvents: {
+        value: (id,event) => {
             $.ajax({
                 url: `http://localhost:3000/events/${id}`,
-                method: "PUT"
+                method: "PUT",
+                data:event
             })
         }
     } //End of Event Methods
